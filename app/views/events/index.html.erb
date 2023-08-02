@@ -1,0 +1,24 @@
+<p style="color: green"><%= notice %></p>
+
+<%= link_to "All Events", events_path %> 
+<%= link_to "Complete Events", events_path(done: true) %> 
+<%= link_to "Incomplete Events", events_path(done: false) %> 
+
+<% if params[:done] == "true" %>
+  <h1>Complete Events</h1>
+<% elsif params[:done] == "false" %>
+  <h1>Incomplete Events</h1>
+<% else %>
+  <h1>Events</h1>
+<% end %>
+
+<div id="events">
+  <% @events.each do |event| %>
+    <%= render event %>
+    <p>
+      <%= link_to "Show this event", event %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New event", new_event_path %>
