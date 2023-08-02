@@ -110,7 +110,7 @@ production:
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  database: event_manager_db_andrewochoa # CHANGE THIS TO YOUR OWN DATABASE NAME IN RENDER
-  username: event_manager_db_andrewochoa_user # CHANGE THIS TO YOUR OWN DATABASE USERNAME IN RENDER
+  database: todolist_db_if60 # CHANGE THIS TO YOUR OWN DATABASE NAME IN RENDER
+  username: todolist_db_if60_user # CHANGE THIS TO YOUR OWN DATABASE USERNAME IN RENDER
   password: <%= ENV['DATABASE_PASSWORD'] %> # DO NOT MODIFY THIS LINE!
   url: <%= ENV['DATABASE_URL'] %> # DO NOT MODIFY THIS LINE!
